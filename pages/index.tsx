@@ -7,7 +7,7 @@ import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
 import Footer from "../components/Footer";
 
-export default function Home({ exploreData, cardsData }) {
+export default function Home({ exploreData, cardsData }: any) {
   return (
     <div className="">
       <Head>
@@ -24,7 +24,7 @@ export default function Home({ exploreData, cardsData }) {
 
           {/* Pull data from server */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {exploreData?.map(({ img, distance, location }) => (
+            {exploreData?.map(({ img, distance, location }: any) => (
               <SmallCard
                 key={img}
                 img={img}
@@ -39,7 +39,7 @@ export default function Home({ exploreData, cardsData }) {
           <h2 className="text-4xl font-semibold py-8">Live anywhere</h2>
           
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
-            {cardsData?.map(({ img, title }) => (
+            {cardsData?.map(({ img, title }: any) => (
                 <MediumCard
                   key={img}
                   img={img}
